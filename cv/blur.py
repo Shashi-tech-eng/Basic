@@ -1,6 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
-img=cv2.imread("bumble.png")
+im=cv2.imread("bumble.png")
+img=cv2.cvtColor(im,cv2.COLOR_BGR2RGB)
 #Averaging Blur
 blur1=cv2.blur(img,(5,5))
 #Gaussian Blur 
