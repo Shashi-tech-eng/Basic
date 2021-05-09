@@ -1,0 +1,15 @@
+import cv2
+import numpy as np
+img=cv2.imread("bumble.png")
+b,g,r=cv2.split(img)
+blank=np.zeros(img.shape[:2],dtype='uint8')
+b,g,r=cv2.split(img)
+blue_image=cv2.merge([b,blank,blank])
+green_image=cv2.merge([blank,g,blank])
+red_image=cv2.merge([blank,blank,r])
+cv2.imshow("Original",img)
+cv2.imshow("Blue",blue_image)
+cv2.imshow("Green",green_image)
+cv2.imshow("Red",red_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
